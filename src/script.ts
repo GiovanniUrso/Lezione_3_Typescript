@@ -8,10 +8,14 @@ abstract class Persona {
         this.nome = nome;
         this.cognome = cognome
     }
+    vaACorrere():void{
+        return
+    }
 }
 interface Dipendente{
     nomeazienda : string; // L'interfaccia è una classe astratta che non può essere istanziata quindi. La classe che IMPLEMENTA un interfaccia DEVE avere tutte le proprietà descritte nell'interfaccia
     dataassunzione:Date;
+    vaALavorare():string;
 }
 
 class Lavoratore extends Persona implements Dipendente{
@@ -26,6 +30,9 @@ class Lavoratore extends Persona implements Dipendente{
         this.nomeazienda = nomeazienda;
         this.dataassunzione = dataassunzione;
     }
+    vaALavorare():string {
+        return '33';
+    }
 }
 
 enum Mesi{
@@ -38,3 +45,5 @@ enum Mesi{
 function eta <t> (anno:t):t {
     return anno 
 }
+
+const a:HTMLInputElement = <HTMLInputElement>document.querySelector('.container') 
